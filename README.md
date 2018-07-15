@@ -50,7 +50,7 @@ private_key_file=~/testingkey.pem
 remote_user = ubuntu
 ```
 
-## Configure Host File in home director ~/hosts:
+## Configure Host File in home directory ~/hosts:
 
 ```bash
 [local]
