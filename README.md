@@ -59,6 +59,6 @@ localhost
 [webserver]
 ```
 
-## To allow single input the follow can be applied(although not recommended):
+## To allow single input the following can be applied(although not recommended):
 
 https://stackoverflow.com/questions/32297456/how-to-ignore-ansible-ssh-authenticity-checking
