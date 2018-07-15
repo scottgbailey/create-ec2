@@ -2,7 +2,9 @@
 
 ### To deploy an EC2 Instance:
 
-`ansible-playbook -i ./hosts create-ec2.yml nginx.yml`
+1.  [Clone repository](https://github.com/scottgbailey/create-ec2)
+1.  Change to cloned repository directory
+1.  `ansible-playbook -i ./hosts create-ec2.yml nginx.yml`
 
 When a connection is made to the new host you will be prompted for authenticity; type 'yes'
 
