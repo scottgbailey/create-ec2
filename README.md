@@ -1,9 +1,10 @@
 # Deploy an EC2 Instance with Nginx and display EC2 Instance ID
 
-### To deploy an EC2 Instance:
+### To deploy an EC2 (Ubuntu) Instance:
 
 1.  [Clone repository](https://github.com/scottgbailey/create-ec2)
 1.  Change to cloned repository directory
+1.  Set prequesisits: Install python, pip, boto, botocore, boto3, ansible >=2.4 configure AWS Access keys, ansible.cfg (match user name with AMI chosen)
 1.  `ansible-playbook -i ./hosts create-ec2.yml nginx.yml`
 
 When a connection is made to the new host you will be prompted for authenticity; type 'yes'
