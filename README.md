@@ -1,5 +1,11 @@
 # Deploy an EC2 Instance with Nginx and display EC2 Instance ID
 
+### To deploy an EC2 Instance:
+
+`ansible-playbook -i ./hosts create-ec2.yml nginx.yml`
+
+When a connection is made to the new host you will be prompted for authenticity; type 'yes'
+
 ## Setup required for Ubuntu Linux Machine:
 
 sudo yum install python
@@ -43,12 +49,6 @@ remote_user = ubuntu
 localhost
 
 [webserver]
-
-# To deploy an EC2 Instance:
-
-`ansible-playbook -i ./hosts create-ec2.yml nginx.yml`
-
-When a connection is made to the new host you will be prompted for authenticity; type 'yes'
 
 ## To allow single input the follow can be applied(although not recommended):
 
