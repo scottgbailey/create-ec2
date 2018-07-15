@@ -6,7 +6,7 @@
 
 When a connection is made to the new host you will be prompted for authenticity; type 'yes'
 
-## Setup required for Ubuntu Linux Machine:
+## Setup required for Ubuntu/Localhost Linux Machine:
 
 1.  sudo yum install python
 1.  sudo yum update
@@ -16,7 +16,7 @@ When a connection is made to the new host you will be prompted for authenticity;
 1.  sudo pip install botocore
 1.  sudo pip install boto3
 
-## Install ansible >=2.4 on ubuntu host
+## Install ansible >=2.4 on Ubuntu/Localhost:
 
 1.  sudo apt-get update
 1.  sudo apt-get install software-properties-common
@@ -24,7 +24,7 @@ When a connection is made to the new host you will be prompted for authenticity;
 1.  sudo apt-get update
 1.  sudo apt-get install ansible
 
-## CentOS
+## CentOS:
 
 1.  sudo subscription-manager repos --enable rhel-7-server-ansible-2.6-rpms
 
@@ -47,7 +47,7 @@ private_key_file=~/testingkey.pem
 remote_user = ubuntu
 ```
 
-## Configure Host File in home director ~/hosts
+## Configure Host File in home director ~/hosts:
 
 ```bash
 [local]
