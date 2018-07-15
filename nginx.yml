@@ -1,0 +1,29 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+    # - name: sleep for 60 seconds and continue with play
+    #   wait_for: timeout=60
+    #   delegate_to: localhost
+
+    - name: Install Nginx web server
+      apt: pkg=nginx state=present update_cache=true
+      notify:
+        - restart nginx
+
+    #Get the EC2 Instances details
+    - name: Gather EC2 instance metadata
+      action: ec2_metadata_facts
+      register: ec2_metadata_facts
+    #- debug: var=ec2_metadata_facts
+
+    - name: Upload default index.html for host
+      copy:
+        dest: /usr/share/nginx/html/index.html
+        #content: "{{ ansible_hostname }} and {{ ansible_ec2_instance_id }}"
+        #Add the EC2 instance details to a page.
+        content: "{{ ansible_ec2_instance_id }}" 
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted
